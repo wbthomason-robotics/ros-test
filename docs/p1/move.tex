@@ -1,0 +1,43 @@
+\subsection{Publishing and Subscribing}
+\label{p:topics}
+
+The goal of this problem is to have you learn how to move a turtle using Twist messages and
+calculate the distance between turtle and a point.
+
+The work for this problem should be done in file \texttt{pubsub.py}.
+
+\begin{enumerate}[(a)]
+  \item In \texttt{\_\_init\_\_}:
+    \begin{enumerate}[i.]
+      \item First, have your turtle subscribe to \texttt{turtle1/pose} with the callback function
+        \texttt{self.update\_pose}. %(\textit{X points})
+      \item Have your turtle publish to \texttt{turtle1/cmd\_vel}. %(\textit{X points})
+      \item Specify a publishing rate of $10$.
+    \end{enumerate}
+  \item In \texttt{move}:
+    \begin{enumerate}[i.]
+      \item Create a Twist message with values that change both the angular and linear velocities
+        such that the turtle moves both angularly and linearly.
+      \item Publish the Twist message to the velocity publisher.
+    \end{enumerate}
+  \item In \texttt{update\_pose}:
+    \begin{enumerate}[i.]
+      \item Set the instance variable \texttt{self.pose} to the information provided by the subscriber.
+    \end{enumerate}
+  \item In \texttt{calculate\_distance}:
+    \begin{enumerate}[i.]
+      \item Using \texttt{numpy}, set \texttt{vector} to be the difference between the coordinates
+        of the turtle's current pose and the point $(x,y)$. (Hint: Use a \texttt{numpy} array for
+        your vector)
+      \item Using \texttt{numpy} and \texttt{vector}, set \texttt{distance} to the distance between the
+        turtle and the point $(x,y)$.
+      \item Set the ROS parameter to \texttt{distance}. (Note: the value of distance must be cast
+        to a float).
+    \end{enumerate}
+  \item In \texttt{pubsub.launch}:
+    \begin{enumerate}[i.]
+      \item Review the format of this file and understand what it does (see ROS launch file
+        documentation for more information).
+    \end{enumerate}
+\end{enumerate}
+

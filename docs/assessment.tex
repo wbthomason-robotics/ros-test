@@ -94,7 +94,7 @@ Get the ``Pro EDU'' version for Linux and extract the files to some directory
 
 Before starting the project, you need to set up a catkin workspace. To do this, follow the
 instructions here: \url{https://wiki.ros.org/catkin/Tutorials/create_a_workspace}. Afterwards, copy
-the \texttt{src} subdirectory from this package into \texttt{<YOUR CATKIN ROOT>/src/rpal-ros-test}
+the \texttt{src} subdirectory from this package into \texttt{<YOUR CATKIN ROOT>/src/rpal\_ros\_test}
 and run \texttt{catkin build} to build the initial workspace.
 
 \subsection{Using V-REP}
@@ -132,8 +132,26 @@ language used is different.}.
 Implement code to solve the following problems, using the provided simulator framework. Please also
 document any difficulties you encountered and how you overcame them in a file named
 \texttt{problems.txt}, which you should include with the final submission. When you're done, bundle
-up the \emph{whole} \texttt{rpal-ros-test} directory into a \texttt{.tar.gz} and send it to us for
+up the \emph{whole} \texttt{rpal\_ros\_test} directory into a \texttt{.tar.gz} and send it to us for
 assessment.
+
+\section{Part 1: Basic ROS}
+
+This section is intended to assess your knowledge of and ability to use basic ROS concepts.
+
+\input{p1/move.tex}
+\input{p1/single_flower.tex}
+\input{p1/client.tex}
+\input{p1/service_spawn.tex}
+
+\section{Part 2: Forward Kinematics}
+
+This section, which is intended to be more difficult, will assess your ability to use ROS in a more
+realistic robotics context as well as your knowledge of/ability to learn some fundamental robotics
+concepts.
+
+\input{p2/fk.tex}
+\input{p2/appendix.tex}
 
 \end{document}
 
