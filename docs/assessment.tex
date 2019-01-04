@@ -1,0 +1,143 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1.0in]{geometry}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{bigstrut}
+\usepackage{booktabs}
+\usepackage{enumerate}
+\usepackage{fancyvrb}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{ifthen,version}
+\usepackage{longtable}
+\usepackage{textcomp}
+\usepackage{todonotes}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{mwe}
+\hypersetup{
+    colorlinks,
+    %pdfborderstyle={/S/U/W 1}
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black},
+}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\setlength\bigstrutjot{3pt}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\newcommand{\la}{\textlangle{}}
+\newcommand{\ra}{\textrangle{}}
+\newcommand{\wtodo}[1]{\todo[author=WT,inline]{#1}}
+
+\begin{document}
+\title{RPAL ROS \& Programming Skills Assessment}
+\date{}
+\author{}
+
+\maketitle
+
+\section{Objective:} 
+
+Demonstrate understanding of basic ROS usage and Python (or C++) programming, as well as some basic
+robotics concepts. This project will be used to assess your readiness to begin working in RPAL as an
+undergraduate researcher.
+
+\section{Collaboration Policy:} 
+
+This assignment \textbf{must be completed alone}. You are permitted to use any internet resources
+(short of asking for help on a forum, etc.), books, tools, what have you, but you may \textbf{not}
+collaborate with anyone and you may \textbf{not} ask any grad students or anyone else for
+assistance. This is an assessment of you and your current skills; if you violate this policy we
+cannot make an accurate assessment and will not be able to work with you.
+
+Note that you can come to us if you are truly stuck. If the issue is a bug or simple
+misunderstanding with the provided code, we can help you out and you can get back to the assessment.
+\textbf{However}, if you come to us and the provided code is working correctly (i.e.\ the error is
+with your code), that will constitute termination of the project and we will assess your work in
+whatever state it is in.
+
+\section{Running the simulator framework}
+
+We have provided a simulation framework for you to develop and test your code. In order to use the
+framework, you'll need to carefully follow these instructions.
+
+\subsection{Setup}
+
+Do these steps \emph{once}, before starting your work. We also recommend using Git to store your
+partial progress. Note that successfully completing the setup process is part of the assessment.
+
+\subsubsection{ROS}
+
+Follow the instructions here: \url{https://wiki.ros.org/melodic/Installation} to install ROS
+Melodic.
+
+\subsubsection{V-REP}
+
+The simulation framework is based around
+\href{http://www.coppeliarobotics.com/downloads.html}{V-REP}, which you can download at that link.
+Get the ``Pro EDU'' version for Linux and extract the files to some directory
+(\texttt{\textasciitilde/V-REP} is a good choice). Finally, copy the file
+\texttt{libv\_repExtRosInterface.so} from this directory to wherever you extracted V-REP.
+
+\subsubsection{Catkin Workspace}
+
+Before starting the project, you need to set up a catkin workspace. To do this, follow the
+instructions here: \url{https://wiki.ros.org/catkin/Tutorials/create_a_workspace}. Afterwards, copy
+the \texttt{src} subdirectory from this package into \texttt{<YOUR CATKIN ROOT>/src/rpal-ros-test}
+and run \texttt{catkin build} to build the initial workspace.
+
+\subsection{Using V-REP}
+
+The second part of this assignment will require you to run V-REP. To this end, we have provided a
+V-REP scene file, \texttt{assessment.ttt}, in this directory. Use the following steps to run the
+simulator:
+\begin{enumerate}
+  \item Start \texttt{roscore}.
+  \item (assuming you extracted V-REP to \texttt{\textasciitilde/V-REP}), run
+  \texttt{\textasciitilde/V-REP/vrep.sh assessment.ttt} in this directory.
+  \item Press the "Play" button in the upper toolbar.
+  \item Run the commands you need for the particular problem.
+  \item Run the commands to execute your code.
+\end{enumerate}  
+
+\textbf{To start the simulation, you must hit the play button.}
+
+\section{Assignment:}
+
+RPAL primarily uses ROS and Python for research coding. Thus, you will need to write Python code
+using \href{http://wiki.ros.org/rospy}{rospy} to be an effective researcher in the lab. If you need
+a refresher for Python, we suggest \href{https://learnxinyminutes.com/docs/python/}{this quick
+reference}\footnote{Note that we use Python 3 in most research.}. You should also use the
+\href{http://www.numpy.org/}{numpy library} for
+\href{https://docs.scipy.org/doc/numpy-1.14.0/reference/generated/numpy.matrix.html}{matrix}
+calculations and linear algebra, which is common in robotics research.
+
+If you need a reference for ROS, we suggest the \href{http://wiki.ros.org/ROS/StartGuide}{ROS
+``Getting Started'' guide}, the \href{http://wiki.ros.org/rospy}{rospy documentation}, and Jason
+O'Kane's \href{https://cse.sc.edu/~jokane/agitr/agitr-letter.pdf}{``A Gentle Introduction to
+ROS''}\footnote{Note that AGITR uses C++ instead of Python. The concepts will be the same, but the
+language used is different.}.
+
+Implement code to solve the following problems, using the provided simulator framework. Please also
+document any difficulties you encountered and how you overcame them in a file named
+\texttt{problems.txt}, which you should include with the final submission. When you're done, bundle
+up the \emph{whole} \texttt{rpal-ros-test} directory into a \texttt{.tar.gz} and send it to us for
+assessment.
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
