@@ -80,16 +80,22 @@ The work for this problem should be done in file \texttt{spawn\_flower.py}.
   \begin{enumerate}[i.]
     \item Initialize your \texttt{`draw\_turtle'} node
     .
-    \item Block while waiting for the \texttt{`spawn'} service to become available. See rospy documentation for more information.
+    \item Block while waiting for the \texttt{`spawn'} service to become available. See rospy
+    documentation for more information.
+
     \item In first \texttt{try}: Create a handle for calling the spawn service.
     \item In second \texttt{try}: Uncomment the provided lines of code
-    \item Block while waiting for \texttt{`/draw'} service, and then set up the service handle for the draw service (in the same way as problem 3). %these instructions seem vague, come back and fix
+    \item Block while waiting for \texttt{`/draw'} service, and then set up the service handle for
+    the draw service (in the same way as problem 3). %these instructions seem vague, come back and fix
+
     \item Set up velocity publisher for \texttt{`{}/cmd\_vel'.format(turtle\_name)} and set the rate to 5.
   \end{enumerate}
   
   
   
-  \item In \texttt{while not rospy.is\_shutdown()} section of \texttt{draw\_flower}: Publish the velocity messages returned from draw. Then sleep for predetermined rate.
+  \item In \texttt{while not rospy.is\_shutdown()} section of \texttt{draw\_flower}: Publish the
+  velocity messages returned from draw. Then sleep for predetermined rate.
+
   \item In \texttt{\_\_name\_\_ == `\_\_main\_\_'}: Call your function!
   \item In \texttt{spawn\_flower.launch}:
   \begin{enumerate}[i.]
@@ -97,7 +103,9 @@ The work for this problem should be done in file \texttt{spawn\_flower.py}.
     \item Launch \texttt{draw\_service} node from \texttt{draw\_server.py}.
     \item  Launch \texttt{launcher} node from \texttt{launcher.py}.
   \end{enumerate}
-  Your resulting product should resemble Figure~\ref{fig:4}. There should be between 2 and 5 turtles spawned, in addition to the original turtle. The starting points of the turtles is random.
+
+  Your resulting product should resemble Figure~\ref{fig:4}. There should be between 2 and 5 turtles
+  spawned, in addition to the original turtle. The starting points of the turtles is random.
 
 
 \end{enumerate}
