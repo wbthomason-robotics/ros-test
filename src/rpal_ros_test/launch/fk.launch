@@ -1,0 +1,9 @@
+<!-- Launch the framework code for problem 1 on p3 -->
+<launch>
+  <node name="start_vrep" pkg="p3" type="start_vrep" args="~/vrep $(find p3)/scenes/p3-multi.ttt"/>
+  <node name="arm_config" pkg="p3" type="arm_config.py" output="screen">
+    <param name="fk_debug" value="False"/>
+  </node>
+  <node name="kin_service" pkg="p3" type="problem1.py" output="screen"/>
+</launch>
+

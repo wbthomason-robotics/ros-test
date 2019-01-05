@@ -1,0 +1,8 @@
+<launch>
+
+  <!-- launch turtlesim node -->
+  <node pkg="turtlesim" name="sim" type="turtlesim_node"/>
+
+  <!-- launch "basic" node from "problem1.py" in package "p1" -->
+  <node name="basic" pkg="p1" type="problem1.py" />
+</launch>

@@ -1,0 +1,3 @@
+JointAngles angles
+---
+PointArray points # the positions of each frame (5 points)
