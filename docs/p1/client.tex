@@ -13,40 +13,34 @@ The work for this problem should be done in file \texttt{client.py}.
   \label{fig:2}
 \end{figure}
 
+In \texttt{draw\_flower}:
 \begin{enumerate}[(a)]
-  \item In \texttt{draw\_flower}:
-  \begin{enumerate}[i.]
-    \item Initialize your node with the name \texttt{drawing\_turtle}.
-    \item Wait for the service \texttt{draw}.
-  \end{enumerate}
-  
-  \item In \texttt{try} section: Fill in the service handle for the draw service with \texttt{draw}
-  and \texttt{Draw}. Check \texttt{srv/Draw.srv} and \texttt{rospy} documentation for more information.
+  \item Initialize your node with the name \texttt{drawing\_turtle}.
+  \item Wait for the service \texttt{draw}.
 
-  \item After the \texttt{try} section: Fill in with a publisher that publishes to
-  \texttt{/turtle1/cmd\_vel} with type \texttt{Twist} and queue size of 10 then set your rate to 5.
+  \item Get a service handle for the draw service. Check \texttt{srv/Draw.srv} and \texttt{rospy}
+    documentation for more information.
 
-  \item In \texttt{while not rospy.is\_shutdown()} section:
-  \begin{enumerate}[i.]
-    \item Use the draw service to get the velocity message to publish. Look at
-    \texttt{srv/Draw.srv} to determine the parameters and appropriate return name.
-    \item Sleep for the previously stated rate.
-  \end{enumerate}
+  \item Make a publisher that publishes to \texttt{/turtle1/cmd\_vel} with type \texttt{Twist} and
+    queue size of 10
+  \item Make a 5Hz \texttt{Rate}.
 
-  \item In \texttt{if \_\_name\_\_ == `\_\_main\_\_'}: Call your function to draw the flower!
-
-  \item In \texttt{client.launch}:
-  \begin{enumerate}[i.]
-    \item Launch the turtlesim node.
-    \item Launch the \texttt{draw\_service} node.
-    \item  Launch the \texttt{draw\_flower} node.
-  \end{enumerate}
-
+  \item Loop, and:
+    \begin{enumerate}[i.]
+      \item Use the draw service to get the velocity message to publish. Look at \texttt{srv/Draw.srv}
+        to determine the parameters and appropriate return name.
+      \item Sleep for the previously created rate.
+    \end{enumerate}
 \end{enumerate}
 
+In the main script:
+\begin{enumerate}[(a)]
+  \item Call your function to draw the flower!
+\end{enumerate}
 
-
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: "../assessment"
-%%% End:
+In \texttt{client.launch}:
+\begin{enumerate}[(a)]
+  \item Launch the turtlesim node.
+  \item Launch the \texttt{draw\_service} node.
+  \item  Launch the \texttt{draw\_flower} node.
+\end{enumerate}
