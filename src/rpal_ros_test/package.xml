@@ -3,7 +3,7 @@
   <name>rpal_ros_test</name>
   <version>0.1.0</version>
   <description>The lab undergraduate ROS assessment</description>
-  <maintainer email=""></maintainer>
+  <maintainer email="rpal@cornell.edu">RPAL</maintainer>
   <license>MIT</license>
   <build_depend>message_generation</build_depend>
   <exec_depend>message_runtime</exec_depend>
