@@ -3,10 +3,10 @@
   <!-- launch turtlesim node -->
   <!-- FILL IN -->
 
-  <!-- launch "draw_service" node from "problem4a.py" in package "p1" -->
+  <!-- launch "draw_service" node from "problem4a.py" in package "rpal_ros_test" -->
   <!-- FILL IN -->
   
-  <!-- launch "draw_flower" node from "problem3.py" in package "p1" -->
+  <!-- launch "draw_flower" node from "problem3.py" in package "prpal_ros_test -->
   <!-- FILL IN -->
   
 </launch>

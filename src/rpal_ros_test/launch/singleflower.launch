@@ -3,6 +3,6 @@
   <!-- launch turtlesim node -->
   <!-- FILL IN -->
 
-  <!-- launch "flower_turtle" node from "problem2.py" in package "p1" -->
+  <!-- launch "flower_turtle" node from "singleflower.py" in package "rpal_ros_test" -->
   <!-- FILL IN -->
 </launch>

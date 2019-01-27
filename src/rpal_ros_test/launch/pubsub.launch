@@ -3,6 +3,5 @@
   <!-- launch turtlesim node -->
   <node pkg="turtlesim" name="sim" type="turtlesim_node"/>
 
-  <!-- launch "basic" node from "problem1.py" in package "p1" -->
-  <node name="basic" pkg="p1" type="problem1.py" />
+  <node name="basic" pkg="rpal_ros_test" type="pubsub.py" />
 </launch>

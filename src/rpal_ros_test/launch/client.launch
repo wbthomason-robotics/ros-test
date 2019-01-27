@@ -4,10 +4,10 @@
   <!-- FILL IN -->
 
   <!-- launch "draw_service" node from "draw" (this is NOT a python file)
-        in package "p1" -->
+        in package "rpal_ros_test" -->
   <!-- FILL IN -->
   
-  <!-- launch "draw_flower" node from "problem3.py" in package "p1" -->
+  <!-- launch "draw_flower" node from "problem3.py" in package "rpal_ros_test" -->
   <!-- FILL IN -->
   
 </launch>
