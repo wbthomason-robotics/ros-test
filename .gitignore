@@ -291,3 +291,7 @@ TSWLatexianTemp*
 
 # generated if using elsarticle.cls
 *.spl
+
+# Misc other
+catkinws/
+.vscode/
