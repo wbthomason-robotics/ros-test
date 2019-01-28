@@ -2,7 +2,7 @@
 
 import rospy
 from rpal_ros_test.msg import JointAngles, PointArray
-from rpal_ros_test.srv import Problem1 as KinService
+from rpal_ros_test.srv import Fk as KinService
 from functools import partial
 from geometry_msgs.msg import Point
 from std_msgs.msg import Float64
